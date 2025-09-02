@@ -160,3 +160,53 @@ print(a[3][0]+" "+a[0]+" "+a[1])
 fruits = ['apple', 'banana', 'cherry']
 
 x = fruits.pop(1)
+
+
+#preety exerice
+
+#assume we are in the bank 
+#if the name of the user start with "r" like user[0] =="r" 
+#and his comp start with @gmail.com or @yahoo.com
+#requirement the user to join the bank should be have age >= 18 && sal > 400$  (400d) should be $  religion ="muslim"
+#Update ,Delete, get money (update)
+#if sal >=100  10%   if sal >=200 20%
+#if all operation good should be inset his cin in the bank rim and ghaith <33
+#exmple ["1111","2222","3333"]  # all this users in this bank 
+#use input dont forget 
+#<   
+#Syntax
+#nomdetableau.append(elmnt)
+
+#400$
+#t[3]!="$"
+#40400404004$
+BANK__RIM__GHAITH =  []
+ok = "yes"
+while ok =="yes":
+    cin  = int(input("taper votre cin"))
+    user=input("name")
+    a=int(input("age"))
+    em=input("adresse email") 
+    s=input("salaire")
+    r=input("religion")
+    domains=["@gmail.com","@yahoo.com"]
+    religionTable = ["musilm","NoMusilm"]
+     
+    if user[0]=="r" and   len(str(cin))==8 and (em[em.find("@"):len(em)]==domains[0] or  em[em.find("@"):len(em)]==domains[1] ) and a>=18  and r ==religionTable[0] and s.find("$")!=-1:
+        print (f"bienvenue we gonna add your in our bank mr  {user} have cin  {cin}")
+        BANK__RIM__GHAITH.append(cin)
+     
+        if int(s[0:s.find("$")]) >10000 :
+            sal = int(s[0:s.find("$")])
+            print(f"votre tax {sal*0.01}")
+        else:
+            print("you dont have tax pretty ")
+        print(BANK__RIM__GHAITH)
+            
+        
+    else:
+        print("check your data ")
+    ok = input("do you wanna continue write yes if you dont wanna continue write no")
+
+
+
